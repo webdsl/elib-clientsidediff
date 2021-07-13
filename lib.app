@@ -46,8 +46,11 @@ template showDiff( leftName : String, leftVersion : String, rightName : String, 
 
 template diffIncludes(){
   includeJS("difflib-browser.js")
-  // includeJS("diff2html-ui.min.js")
-  includeJS("diff2html-ui-slim.min.js")
+
+  // includeJS("diff2html-ui.min.js")      //includes the wrapper of diff2html with highlight for all highlight.js supported languages
+  includeJS("diff2html-ui-slim.min.js")    //includes the wrapper of diff2html with "the most common" highlight.js supported languages
+  // includeJS("diff2html-ui-base.min.js") //includes the wrapper of diff2html without including a highlight.js implementation. You can use it without syntax highlight or by passing your own implementation with the languages you prefer
+  
   includeCSS("highlight-js-github.css")
   includeCSS("diff2html.min.css")
 }
